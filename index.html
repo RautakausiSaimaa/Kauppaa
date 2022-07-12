@@ -26,17 +26,44 @@
             padding: 10px;
             }
         
-        .center {
+        .map {
             margin: auto;
             width: 60%;
             padding: 10px;
         }
+        
+        .tooltip {
+        position:relative;
+        display:inline-block;
+        border-bottom:2px dotted Chartreuse;
+        }
+
+        .tooltip .tooltiptext {
+        visibility:hidden;
+        width:220px;
+        background-color:darkred;
+        color:white;
+        text-align:center;
+        border-radius:7px;
+        padding:2px 0;
+        position:absolute;
+        z-index:2;
+        bottom:100%;
+        left:41%;
+        margin-left:-61px;
+        }
+
+        .tooltip:hover .tooltiptext {
+        visibility:visible;
+        }
+
+        
     </Style>
 </head>
 <body>
     <div class="banner">
     <div class="headline">
-    <h1>Rautakauden kauppaa Suomessa --</h1>
+    <h1>Rautakauden kauppaa Suomessa -</h1>
     <h2>Saimaan ja muun järvialueen rikkaudet maailmalle</h2>
     </div>
     </div>
@@ -52,10 +79,14 @@
             <p>Rahoja ja painon määrittämisessä tarvittuja punnuksia ja vaa'oista irronneita osia löytyy yhä maastosta.</p>
             <p>Näiden löytöjen levintä esitetään tämän sivuston kartoissa.</p>
     </div>
-    <div class="center">
+    <div class="map">
+        <div class="tooltip"> 
+           <span class="tooltiptext">Klikkaa kohteita ja katso tietoja</span>
     <iframe src="https://www.google.com/maps/d/embed?mid=1sGglcIMof2eY6y-M9Y60cQVjz-TIM0A&ehbc=2E312F" 
      width="640" height="480"></iframe> 
     </div>
+    </div>
+
 
 </body>
 </html>
